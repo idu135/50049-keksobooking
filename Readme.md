@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Iana Fomenkova](https://up.htmlacademy.ru/javascript/8/user/50049).
-* Наставник: `Неизвестно`.
+* Наставник: `Евгений Лепешкин`.
 
 ---
 
