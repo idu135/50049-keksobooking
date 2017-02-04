@@ -46,42 +46,22 @@ price.setAttribute('max', '1000000');
 price.required = true;
 address.required = true;
 
-var toggleSelect = function (element, val) {
-  element.value = val;
-};
-
 arrivalTime.addEventListener('change', function (e) {
-  var time = e.target.value;
-  toggleSelect(departureTime, time);
+  departureTime.value = e.target.value;
 });
 
 departureTime.addEventListener('change', function (e) {
-  var time = e.target.value;
-  toggleSelect(arrivalTime, time);
+  arrivalTime.value = e.target.value;
 });
-
-if (accomodationType.value === 'appartment') {
-  price.setAttribute('min', '5000');
-}
 
 accomodationType.addEventListener('change', function (e) {
-  if (e.target.value === 'appartment') {
-    price.setAttribute('min', '5000');
-  } else if (e.target.value === 'palace') {
-    price.setAttribute('min', '10 000');
-  } else if (e.target.value === 'shack'){
-    price.setAttribute('min', '0');
-  }
+  price.value = e.target.value;
 });
 
-if(roomsNumber.value === 'single-room'){
-  capacity.value = 'no-guests';
-};
-
 roomsNumber.addEventListener('change', function (e) {
-  if ((e.target.value === 'single-room') || (e.target.value === 'hundred-room')) {
-    capacity.value = '3-guests';
-  } else {
-    capacity.value = 'no-guests';
-  }
+  capacity.value = e.target.value;
+});
+
+capacity.addEventListener('change', function (e) {
+  roomsNumber.value = e.target.value;
 });
